@@ -8,8 +8,8 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build with Buildozer
-        # We must use v1.2.0 to stop the 'invalid user' error
-        uses: ArtemSBulgakov/buildozer-action@v1.2.0
+        # Using @master to get the latest fixes for the 'chown' error
+        uses: ArtemSBulgakov/buildozer-action@master
         id: buildozer
         with:
           command: buildozer android debug
